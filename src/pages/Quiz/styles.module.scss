@@ -1,0 +1,161 @@
+.contentQuiz{
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-size: 1.875rem;
+
+  .question{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .button{
+    background: #260842;
+    border-radius: 10%;
+    border-color: #74FFFF;
+    border-style: solid;
+    margin: 1%;
+    color: #e1e1e6;
+    height: 4.375rem;
+    width: 4.68rem;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+  .logo{
+    margin-top: 10%;;
+  }
+  .containerDescription{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 2;
+    align-items: center;
+  }
+  .votes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .instructions{
+    display: flex;
+    font-size: 16px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
+  }
+  .startResult{
+    background: #260842;
+    height: 40px;
+    padding: 0 40px;
+    border-radius: 20px;
+    color: #e1e1e6;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+  .containerVotes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 2;
+  }
+  footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .movement{
+      display: flex;
+      margin-bottom: 10%;
+      .leftDirection{
+        background: #260842;
+        border-radius: 20% 0 0 20%;
+        color: #e1e1e6;
+        height: 43px;
+        width: 78px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+      .rightDirection{
+        background: #260842;
+        border-radius: 0 20% 20% 0;
+        color: #e1e1e6;
+        height: 43px;
+        width: 78px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+      .verticalRow{
+        Float:left;
+        width:1px;
+        background-color: white
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    *{
+      font-size: 1.25rem;
+    }
+    .button{
+      font-size: 1.25rem;
+      height: 3.75rem;
+      width: 3.125rem;
+    }
+    .instructions p {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 375px) {
+    *{
+      font-size: 1rem;
+    }
+  }
+  
+}
