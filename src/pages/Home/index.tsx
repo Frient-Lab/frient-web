@@ -1,10 +1,8 @@
 import styles from './styles.module.scss';
 import logo from '../../assets/logo.svg';
 import { Link } from "react-router-dom";
-import { AnswerContext } from '../../context/AnswerContext';
-import { useContext } from 'react';
 
-export function HomeQuiz() {
+export function Home() {
 
   return (
     <main className={styles.contentWrapper}>

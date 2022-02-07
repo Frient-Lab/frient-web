@@ -1,0 +1,75 @@
+.contentWrapper{
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+
+  .filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 8.25rem;
+  }
+
+  .filter{
+    background: #260842;
+    opacity: 0.5;
+    height: 40px;
+    padding: 0 40px;
+    border-radius: 20px;
+    color: #e1e1e6;
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  svg{
+    margin-right: 5px;
+  }
+
+  .startQuiz{
+    background: #260842;
+    height: 2.4rem;
+    padding: 0 1.5rem;
+    border-radius: 20px;
+    color: #e1e1e6;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  *{
+    font-size: 1.1rem;
+  }
+  .contentWrapper .filter {
+    font-size: 1rem;
+  }
+  .contentWrapper .startQuiz {
+    font-size: 1rem;
+    height: 1.875rem;
+  }
+}
