@@ -6,9 +6,6 @@ import { useContext } from 'react';
 
 export function HomeQuiz() {
 
-  const { answer } = useContext(AnswerContext);
-  console.log(answer);
-
   return (
     <main className={styles.contentWrapper}>
       <img src={logo} alt="Logo Frient" />

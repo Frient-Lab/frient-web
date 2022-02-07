@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { api } from "../../services/api";
 import { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AnswerContext } from "../../context/AnswerContext";
 
 type Question = {
@@ -18,7 +18,15 @@ export function Quiz() {
   const [indexQuestion, setIndexQuestion] = useState(0);
 
   const { addAnswer, answers } = useContext(AnswerContext);
- 
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (answers.length == 20) {
+      navigate("/finishquiz");
+    }
+  }, [answers]);
+  
 
   useEffect(() => {
     api.get<Question[]>("question").then((response) => {
@@ -42,7 +50,7 @@ export function Quiz() {
                 onClick={() => {
                   addAnswer(
                     {
-                      idPeople: 1,
+                      idPeople: 2,
                       idQuestion: questions[indexQuestion].id,
                       answer: 0,
                       active: true,
@@ -59,7 +67,7 @@ export function Quiz() {
                 onClick={() => {
                   addAnswer(
                     {
-                      idPeople: 1,
+                      idPeople: 2,
                       idQuestion: questions[indexQuestion].id,
                       answer: 20,
                       active: true,
@@ -76,7 +84,7 @@ export function Quiz() {
                 onClick={() => {
                   addAnswer(
                     {
-                      idPeople: 1,
+                      idPeople: 2,
                       idQuestion: questions[indexQuestion].id,
                       answer: 40,
                       active: true,
@@ -93,7 +101,7 @@ export function Quiz() {
                 onClick={() => {
                   addAnswer(
                     {
-                      idPeople: 1,
+                      idPeople: 2,
                       idQuestion: questions[indexQuestion].id,
                       answer: 60,
                       active: true,
@@ -110,7 +118,7 @@ export function Quiz() {
                 onClick={() => {
                   addAnswer(
                     {
-                      idPeople: 1,
+                      idPeople: 2,
                       idQuestion: questions[indexQuestion].id,
                       answer: 80,
                       active: true,
@@ -127,7 +135,7 @@ export function Quiz() {
                 onClick={() => {
                   addAnswer(
                     {
-                      idPeople: 1,
+                      idPeople: 2,
                       idQuestion: questions[indexQuestion].id,
                       answer: 100,
                       active: true,
@@ -146,9 +154,6 @@ export function Quiz() {
               <p>5 -{">"} Muito provavel</p>
             </div>
           </div>
-          <Link to="result" className={styles.startResult}>
-            FINALIZAR
-          </Link>
         </div>
       </section>
       <footer>
@@ -167,6 +172,7 @@ export function Quiz() {
             onClick={() => {
               setIndexQuestion(indexQuestion + 1);
             }}
+            disabled={answers[indexQuestion] == null}
             className={styles.rightDirection}
           >
             <MdChevronRight size={"1.875rem"} />

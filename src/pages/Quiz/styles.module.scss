@@ -66,25 +66,6 @@
     justify-content: space-between;
     padding: 0 5px 0 5px;
   }
-  .startResult{
-    background: #260842;
-    height: 40px;
-    padding: 0 40px;
-    border-radius: 20px;
-    color: #e1e1e6;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      filter: brightness(0.9);
-    }
-  }
   .containerVotes{
     display: flex;
     flex-direction: column;
