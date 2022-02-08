@@ -1,12 +1,13 @@
-
 .contentWrapper{
-  max-width: 900px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   font-size: 2.5rem;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 20%;
+  color: #292F3F;
+  background: white;
 
   .profile{
     display: flex;
