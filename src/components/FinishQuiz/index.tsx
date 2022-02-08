@@ -22,7 +22,9 @@ export function FinishQuiz() {
 
     addQuiz(response.data);
 
-  }
+    localStorage.removeItem("@answerArray");
+
+  };
 
   return (
     <main className={styles.contentWrapper}>

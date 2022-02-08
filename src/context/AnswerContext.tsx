@@ -17,14 +17,7 @@ export const AnswerContext = createContext<AnswerContextState>(
 );
 
 export const AnswerProvider: FC = ({ children }) => {
-  const [reviewing, setReviewing] = useState(() : boolean => {
-    if (typeof window != "undefined") {
-      return JSON.parse(localStorage.getItem("@reviewingAnswer") || "true") as boolean;
-    }
-    return true;
-  });
-
-
+  
   const [answers, setAnswers] = useState<Answer[]>((): Answer[] => {
     if (typeof window != "undefined") {
       return JSON.parse(

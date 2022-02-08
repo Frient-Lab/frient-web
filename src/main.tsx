@@ -5,10 +5,10 @@ import Router from "./routes";
 import './styles/global.css';
 
 ReactDOM.render(
-  <AnswerProvider>
-    <QuizProvider>
-      <Router />
-    </QuizProvider>
-  </AnswerProvider>,
+    <AnswerProvider>
+      <QuizProvider>
+        <Router />
+      </QuizProvider>
+    </AnswerProvider>,
   document.getElementById('root')
 )

@@ -31,10 +31,11 @@
 }
 
 @media (max-width: 425px) {
-  *{
-    font-size: 1.2rem;
-  }
-  .resultImg {
-    height: 35%;
+  .contentWrapper {
+    font-size: 1.9rem;
+    
+    .resultImg {
+      height: 35%;
+    }
   }
 }

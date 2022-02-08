@@ -21,7 +21,7 @@ export function Filter() {
         Perfis diferentes
       </button>
       </div>
-      <Link to="quiz" className={styles.startQuiz}>
+      <Link to="/chat" className={styles.startQuiz}>
         INICIAR
       </Link>
     </main>

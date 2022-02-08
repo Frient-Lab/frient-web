@@ -120,23 +120,20 @@
       }
     }
   }
-  @media (max-width: 425px) {
-    *{
-      font-size: 1.25rem;
-    }
-    .button{
-      font-size: 1.25rem;
-      height: 3.75rem;
-      width: 3.125rem;
-    }
-    .instructions p {
-      font-size: 0.8rem;
-    }
-  }
-  @media (max-width: 375px) {
-    *{
-      font-size: 1rem;
-    }
-  }
-  
 }
+
+@media (max-width: 425px) {
+  .contentQuiz {
+    font-size: 1.3rem;
+
+    .button{
+       font-size: 1.25rem;
+       height: 3.75rem;
+       width: 3.125rem;
+     }
+     
+     .instructions p {
+       font-size: 0.8rem;
+     }
+  }
+}  

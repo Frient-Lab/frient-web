@@ -62,14 +62,16 @@
 }
 
 @media (max-width: 425px) {
-  *{
-    font-size: 1.1rem;
-  }
-  .contentWrapper .filter {
-    font-size: 1rem;
-  }
-  .contentWrapper .startQuiz {
-    font-size: 1rem;
-    height: 1.875rem;
+  .contentWrapper {
+    font-size: 1.2rem;
+
+    .filter{
+      font-size: 1.1rem;
+    }
+
+    .startQuiz {
+      height: 1.875rem;
+      font-size: 1.1rem;
+    }
   }
 }

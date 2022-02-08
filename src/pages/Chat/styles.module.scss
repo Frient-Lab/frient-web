@@ -1,13 +1,10 @@
-body{
-  background: #ffffff!important;
-  color: black!important;
-}
+
 .contentWrapper{
-  max-width: 1200px;
+  max-width: 900px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
-  font-size: 30px;
+  font-size: 2.5rem;
   flex-direction: column;
   justify-content: space-between;
 
@@ -24,10 +21,14 @@ body{
     margin-top: 5px;
   }
 
+  a{
+    color: #292F3F;
+  }
+
   img{
     border-radius: 50%;
-    height: 70px;
-    width: 70px;
+    height: 5rem;
+    width: 5rem;
   }
 
   .chats{
@@ -42,46 +43,107 @@ body{
     flex-direction: column;
     list-style: none;
     gap: 40px;
-    max-width: 32.625rem;
+    width: 100%;
     margin: 10px 10px 0 10px;
     
-    .message{
+    .messageLeft{
+      display: flex;
+      justify-content: flex-start;
+    }
 
-      &:nth-child(2){
-        margin-left: 11.8rem;
-      }
-      &:nth-child(4){
-        margin-left: 17rem;
-      }
+    .messageRight{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .messageBoxLeft{
+      background: #AC8FFF;
+      border-radius: 30px;
+      color: white;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .messageBoxRight{
+      background: #eb586f;
+      border-radius: 30px;
+      color: white;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .messageContent{
+      font-size: 1.875rem;
     }
   }
 
   .keyboard{
     display: flex;
     justify-content: center;
-    height: 10%;
+    margin-bottom: 2%;
 
     .keyboardContent{
-      height: 40px;
-      width: 540px;
+      width: 100%;
       background: #292F3F;
       border-radius: 20px;
       border: none;
       color: white;
+      font-size: 20px;
+    }
+
+    input::-webkit-input-placeholder {
+      font-size: 20px;
+      line-height: 3;
+      color: white;
+    }
+
+    .keyboardMenu{
+      display: flex;
+      height: 40px;
+      width: 100%;
+      background: #292F3F;
+      border-radius: 10px;
+      border: none;
+      padding: 0 10px;
+    }
+
+    .galery{
+      border-radius: 10px;
+      background: #74FFFF;
+      height: 40px;
+      width: 50px;
+      margin-left: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      
     }
   }
 
 }
 
 @media (max-width: 425px) {
-  *{
-    font-size: 1.1rem;
-  }
-  .contentWrapper .filter {
-    font-size: 1rem;
-  }
-  .contentWrapper .startQuiz {
-    font-size: 1rem;
-    height: 1.875rem;
+  
+  .contentWrapper{
+    margin: 0 10px 0 10px;
+    font-size: 1.5rem;
+
+    svg {
+      font-size: 2.39rem;
+    }
+    .messageList {
+      gap: 10px;
+
+      .messageContent{
+        font-size: 1rem;
+      }
+    }
   }
 }
