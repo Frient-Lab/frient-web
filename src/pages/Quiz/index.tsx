@@ -150,8 +150,8 @@ export function Quiz() {
               </button>
             </div>
             <div className={styles.instructions}>
-              <p>0 -{">"} Nada provável</p>
-              <p>5 -{">"} Muito provavel</p>
+              <p>Menos provável</p>
+              <p>Muito provável</p>
             </div>
           </div>
         </div>

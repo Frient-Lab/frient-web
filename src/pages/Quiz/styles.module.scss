@@ -10,10 +10,11 @@
   font-size: 1.875rem;
 
   .question{
-    flex-grow: 2;
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 5px 0 5px;
   }
 
   .buttons{
@@ -51,7 +52,7 @@
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 2;
+    flex: 2;
     align-items: center;
   }
   .votes{
@@ -70,7 +71,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-grow: 2;
+    flex: 2;
   }
   footer{
     display: flex;

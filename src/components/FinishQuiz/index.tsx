@@ -13,7 +13,7 @@ type QuizResponse = {
 };
 
 export function FinishQuiz() {
-  const { answers } = useContext(AnswerContext);
+  const { answers, setAnswers  } = useContext(AnswerContext);
 
   const { addQuiz } = useContext(QuizContext);
 
@@ -23,6 +23,8 @@ export function FinishQuiz() {
     addQuiz(response.data);
 
     localStorage.removeItem("@answerArray");
+
+    setAnswers([]);
 
   };
 

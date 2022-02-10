@@ -3,6 +3,7 @@ import { FC, createContext, useState, useCallback } from "react";
 interface AnswerContextState {
   answers: Answer[];
   addAnswer(answer: Answer, index: number): void;
+  setAnswers: React.Dispatch<React.SetStateAction<Answer[]>>;
 }
 
 type Answer = {
@@ -17,7 +18,6 @@ export const AnswerContext = createContext<AnswerContextState>(
 );
 
 export const AnswerProvider: FC = ({ children }) => {
-  
   const [answers, setAnswers] = useState<Answer[]>((): Answer[] => {
     if (typeof window != "undefined") {
       return JSON.parse(
@@ -27,17 +27,21 @@ export const AnswerProvider: FC = ({ children }) => {
     return [];
   });
 
-  const addAnswer = useCallback((answer: Answer, index: number) => {
-    const arrayAnswer = [...answers];
-    arrayAnswer[index] = answer;
-    if (typeof window != "undefined") {
-      localStorage.setItem("@answerArray", JSON.stringify(arrayAnswer));
-      setAnswers(arrayAnswer);
-    }
-  }, [answers]);
+  const addAnswer = useCallback(
+    (answer: Answer, index: number) => {
+      const arrayAnswer = [...answers];
+      arrayAnswer[index] = answer;
+      
+      if (typeof window != "undefined") {
+        localStorage.setItem("@answerArray", JSON.stringify(arrayAnswer));
+        setAnswers(arrayAnswer);
+      }
+    },
+    [answers]
+  );
 
   return (
-    <AnswerContext.Provider value={{ answers, addAnswer }}>
+    <AnswerContext.Provider value={{ answers, addAnswer, setAnswers }}>
       {children}
     </AnswerContext.Provider>
   );
