@@ -56,5 +56,3 @@ After merging your receipt request to done, you can delete a branch from yours.
 ## :memo: License
 
 This project is under the MIT license. See the [LICENSE](LICENSE) for details.
-
-Made with ♥ by Gabriel Vieira :wave: [Get in touch!](https://www.linkedin.com/in/bielvieira/)
